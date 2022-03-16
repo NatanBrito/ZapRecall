@@ -7,6 +7,6 @@ export default function LogoNomePequena(){
             <div className="escritaLogoPequena">
             <p>ZapRecall</p>
             </div>
-            </div>
+    </div>
     )
 }
