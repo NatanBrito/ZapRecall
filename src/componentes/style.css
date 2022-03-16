@@ -1,0 +1,95 @@
+body{
+    background-color:#FB6B6B;
+    display: flex;
+    justify-content: center;
+}
+
+.logoName p{
+    width: 152px;
+    height: 35px;
+    color: #FFFFFF;
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 25px;
+    display: flex;
+    justify-content:center ; 
+    align-items: center;
+}
+.raioImg{
+    margin-top: 90px;
+    display: flex;
+    justify-content:center ;
+}
+.escritaTela1{
+    display: flex;
+    justify-content:center ; 
+}
+.configBotao{  
+    width: 141px;
+    height: 31px;
+    background-color: #FFFFFF;
+    border: 1px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    color:#D70900;
+    font-family: 'Recursive', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+.alinhandoBotao{
+    display: flex;
+    justify-content:center ;  
+}
+.telaInicial .alinhandoBotao{
+    margin-top: 71px;
+}
+.logoNomePequena{
+    background-color: violet;
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+}
+.logoNomePequena p{
+         width: 102px;
+         height: 22px;
+        color: #FFFFFF;
+        font-family: 'Righteous', cursive;
+        font-weight: 400;
+        font-size: 20px;
+        display: flex;
+        justify-content:center ; 
+        align-items: center; 
+}
+.raioImgPequena{
+    display: flex;
+    width: 26px;
+    height: 30px;
+    object-fit: cover;
+}
+.escritaLogoPequena{
+    display: flex;
+    justify-content:center ; 
+    align-items: center;
+}
+footer{
+    display: flex;
+    width: 100vw;
+    height: 50px;
+    background-color: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+footer nav span{
+    margin-top: 5px;
+    color: #333333;
+    font-family: 'Recursive', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+footer nav:nth-child(1){
+    margin-top: 10px;
+}
+footer nav{
+    display: flex;
+    justify-content: center;
+
+}
