@@ -1,3 +1,4 @@
+import React from "react";
 import reactDOM from "react-dom";
 import "./componentes/style.css";
 import "./componentes/reset.css";
@@ -10,5 +11,4 @@ function App(){
         </>
     )
 }
-
 reactDOM.render(<App />,document.querySelector(".root"))

@@ -1,20 +1,21 @@
-import BotaoIniciar from "./BotaoIniciar"
-import LogoNome from "./LogoNome"
-import LogoNomePequena from "./LogoNomePequena"
-import Perguntas from "./Perguntas";
+import react from "react";
 import Footer from "./Footer";
+import PerguntaResposta from "./PerguntaResposta";
+import Tela1 from "./Tela1";
+import TelaRecalls from "./TelaRecalls";
 export default function TelaInicial(){
+    const[inicioRecall,setinicioRecall]=react.useState(true)
+    function desativa(){
+        setinicioRecall(false)
+    }
     return(
        <body>
            <div className="telaInicial">
-               {/* <LogoNome />
-               <BotaoIniciar texto="Iniciar Recall!"/> */}
-               <LogoNomePequena />
-               <Perguntas />
-               <Footer />
-               
+                
+                <Tela1 />
+                {/* <TelaRecalls />
+               <Footer /> */}
            </div>
-
        </body>
     )
 }
