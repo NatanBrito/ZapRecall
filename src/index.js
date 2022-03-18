@@ -1,7 +1,7 @@
 import React from "react";
 import reactDOM from "react-dom";
-import "./componentes/style.css";
-import "./componentes/reset.css";
+import "./componentes/styles/style.css";
+import "./componentes/styles/reset.css";
 import TelaInicial from "./componentes/TelaInicial";
 
 function App(){
