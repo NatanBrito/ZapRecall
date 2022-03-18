@@ -1,5 +1,5 @@
 export default function PerguntaResposta(){
-    const qr=
+    const resposta=
     [
         {questao:"O que é JSX?",resposta:"Uma extensão de linguagem do JavaScript"},
         {questao:"O React é __ ", resposta:"uma biblioteca JavaScript para construção de interfaces"},

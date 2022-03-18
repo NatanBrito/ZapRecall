@@ -10,3 +10,5 @@ export default function Pergunta({numPergunta}){
         </div>
     )
 }
+// colocar aqui o componentes pergunta
+//colocar pra correr as resposta com .map e indice EX: resposta[0].map()

@@ -3,11 +3,10 @@ import reactDOM from "react-dom";
 import "./componentes/styles/style.css";
 import "./componentes/styles/reset.css";
 import TelaInicial from "./componentes/TelaInicial";
-
 function App(){
     return(
         <>
-         <TelaInicial/>
+         <TelaInicial  texto="Iniciar Recall!"/>
         </>
     )
 }
