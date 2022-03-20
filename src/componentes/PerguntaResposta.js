@@ -1,6 +1,7 @@
-import React from "react"
-export default function PerguntaResposta({perguntaCard,respostaCard}){
-    const resposta=
+import React from "react";
+import Pergunta from "./Pergunta";
+export default function PerguntaResposta({Pergunta,resposta}){
+    const info=
     [
         {questao:"O que é JSX?",resposta:"Uma extensão de linguagem do JavaScript"},
         {questao:"O React é __ ", resposta:"uma biblioteca JavaScript para construção de interfaces"},
@@ -17,7 +18,7 @@ export default function PerguntaResposta({perguntaCard,respostaCard}){
         <div className="perguntaResposta">
             <div className="cardPergunta">
             <div className="escritaPerguntaResposta">
-            <span>{perguntaCard}</span>
+            <span>{Pergunta}</span>
             </div>
             </div>
             <div className="imgPerguntaResposta">
@@ -29,7 +30,7 @@ export default function PerguntaResposta({perguntaCard,respostaCard}){
         <div className="perguntaResposta">
             <div className="cardPergunta">
             <div className="escritaPerguntaResposta">
-            <span>{respostaCard}</span>
+            <span>{info[0].resposta}</span>
             </div>
             </div>
             <div className="botoesResposta">
