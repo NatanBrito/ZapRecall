@@ -1,44 +1,67 @@
-import React from "react";
-import Pergunta from "./Pergunta";
-export default function PerguntaResposta({Pergunta,resposta}){
-    const info=
-    [
-        {questao:"O que é JSX?",resposta:"Uma extensão de linguagem do JavaScript"},
-        {questao:"O React é __ ", resposta:"uma biblioteca JavaScript para construção de interfaces"},
-        {questao:" Componentes devem iniciar com __ ",resposta:" letra maiúscula"},
-        {questao:"Podemos colocar __ dentro do JSX ",resposta:"expressões"},
-        {questao:"O ReactDOM nos ajuda __ ",resposta:"interagindo com a DOM para colocar componentes "},
-        {questao:"Usamos o npm para __",resposta:"gerenciar os pacotes necessários e suas dependências"},
-        {questao:"Usamos props para __",resposta:"passar diferentes informações para componentes"},
-        {questao:"Usamos estado (state) para __ ",resposta:"dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"}
-    ]
-    const [chamandoResposta,setChamandoResposta]=React.useState(true)
-    if(chamandoResposta){
-    return(
-        <div className="perguntaResposta">
-            <div className="cardPergunta">
-            <div className="escritaPerguntaResposta">
-            <span>{Pergunta}</span>
-            </div>
-            </div>
-            <div className="imgPerguntaResposta">
-            <img   onClick={()=>{setChamandoResposta(false)}}src="./imgs/Vector.svg"/>
-            </div>
-        </div>
-    )} else{
-        return(
-        <div className="perguntaResposta">
-            <div className="cardPergunta">
-            <div className="escritaPerguntaResposta">
-            <span>{info[0].resposta}</span>
-            </div>
-            </div>
-            <div className="botoesResposta">
-                <button className="botaoresposta vermelho">Não lembrei</button>
-                <button className="botaoresposta amarelo">Quase não lembrei</button>
-                <button className="botaoresposta verde">Zap!</button>
-            </div>
-        </div>
-        )
-    }
-}
+// import React from "react";
+// import Card from "./Card";
+// RETIRAR ESSE COMPONENTE, FOI PASSADO PRA DENTRO DO ((((((((((((((((((((((((CARD)))))))))))))))))))))
+// export default function PerguntaResposta({pergunta,resposta,numPergunta}){
+//     const [chamandoResposta,setChamandoResposta]=React.useState(0)
+//     if(chamandoResposta===  0){
+//     return(
+//         <div className="perguntaResposta">
+//             <div className="cardPergunta">
+//             <div className="escritaPerguntaResposta">
+//             <span>{pergunta}</span>
+//             </div>
+//             </div>
+//             <div className="imgPerguntaResposta">
+//             <img   onClick={()=>{setChamandoResposta(1)}}src="./imgs/Vector.svg"/>
+//             </div>
+//         </div>
+//     )} if(chamandoResposta === 1){
+//         return(
+//         <div className="perguntaResposta">
+//             <div className="cardPergunta">
+//             <div className="escritaPerguntaResposta">
+//             <span>{resposta}</span>
+//             </div>
+//             </div>
+//             <div className="botoesResposta">
+//                 <button  onClick={()=>{setChamandoResposta(3,"red")}}className="botaoresposta vermelho">Não lembrei</button>
+//                 <button  onClick={()=>{setChamandoResposta(4,"yellow")}}className="botaoresposta amarelo">Quase não lembrei</button>
+//                 <button  onClick={()=>{setChamandoResposta(5,"green")}} className="botaoresposta verde">Zap!</button>
+//             </div>
+//         </div>
+//         )
+//     } if(chamandoResposta === 3){
+//         return(
+//             <div className="pergunta">
+//             <div>
+//         <span className="red"><s>Pergunta({numPergunta})</s></span>  
+//             </div>
+//             <div className="icon">
+//         <img  src="./imgs/Vector1.svg" />
+//             </div>
+//         </div>
+//         )
+//     } if(chamandoResposta === 4){
+//         return(
+//             <div className="pergunta">
+//             <div>
+//         <span className="yellow"><s>Pergunta({numPergunta})</s></span>  
+//             </div>
+//             <div className="icon">
+//         <img  src="./imgs/Vector2.svg" />
+//             </div>
+//         </div>
+//         )
+//     } if(chamandoResposta === 5){
+//         return(
+//             <div className="pergunta">
+//             <div>
+//         <span className="green"><s>Pergunta({numPergunta})</s></span>  
+//             </div>
+//             <div className="icon">
+//         <img  src="./imgs/Vector3.svg" />
+//             </div>
+//         </div>
+//         )
+//     }
+// }

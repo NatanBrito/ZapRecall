@@ -192,3 +192,12 @@ display: flex;
 .amarelo{
     background-color: #FF922E;
 }
+.yellow{
+    color: #FF922E;
+}
+.red{
+    color: red
+}
+.green{
+    color: green;
+}

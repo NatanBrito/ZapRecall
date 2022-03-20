@@ -1,8 +1,9 @@
 import React from "react"
-import Pergunta from "./Pergunta"
+import Footer from "./Footer"
 import PerguntaResposta from "./PerguntaResposta"
+import Card from "./Card"
 export default function Perguntas (){
-    const info=
+    const cards=
     [
         {questao:"O que é JSX?",resposta:"Uma extensão de linguagem do JavaScript"},
         {questao:"O React é __ ", resposta:"uma biblioteca JavaScript para construção de interfaces"},
@@ -13,31 +14,22 @@ export default function Perguntas (){
         {questao:"Usamos props para __",resposta:"passar diferentes informações para componentes"},
         {questao:"Usamos estado (state) para __ ",resposta:"dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"}
     ]
+    function randomCards(cards) {
+        cards.sort(comparador);
+      }
+      function comparador() {
+        return Math.random() - 0.5;
+      }
+      randomCards(cards);
     return(
     <>   
     {
-        info.map((item,index) =>{
+        cards.map((item,index) =>{
             return(
-         <PerguntaIndice numPergunta={index+1} img="./imgs/Vector4.svg" pergunta={item.questao}/>
+         <Card key={index+1} numPergunta={index+1} img="./imgs/Vector4.svg" pergunta={item.questao} resposta={item.resposta} />
                   )
         })
         }
     </>
     )
-}
-function PerguntaIndice({numPergunta,img,pergunta,resposta}){
-    const [chamandoPergunta,setChamandoPergunta]= React.useState(true)
-    if(chamandoPergunta){
-        return(
-            <div className="pergunta">
-                <div>
-            <span>Pergunta({numPergunta})</span>  
-                </div>
-                <div className="icon">
-            <img onClick={()=>{setChamandoPergunta(false)}} src={img} />
-                </div>
-            </div>
-        )
-    } else{return( <PerguntaResposta pergunta={numPergunta} />)
-    }
 }
