@@ -125,7 +125,7 @@ footer nav{
 .perguntas .pergunta:nth-child(8){
     margin-bottom: 30px;
 }
-.perguntas span{
+.spanPergunta{
     background-color: yellowgreen;
     margin-left: 4%;
     width: 100%;

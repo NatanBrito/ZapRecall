@@ -1,5 +1,5 @@
 import { useState } from "react"
-export default function PerguntaResposta({pergunta,resposta,numPergunta}){
+export default function PerguntaResposta({pergunta,resposta,numPergunta,chamandoCallback}){
     const [chamandoResposta,setChamandoResposta]=useState(0)
     if(chamandoResposta===  0){
     return(
@@ -22,9 +22,12 @@ export default function PerguntaResposta({pergunta,resposta,numPergunta}){
             </div>
             </div>
             <div className="botoesResposta">
-                <button  onClick={()=>{setChamandoResposta(3)}}className="botaoresposta vermelho">Não lembrei</button>
-                <button  onClick={()=>{setChamandoResposta(4)}}className="botaoresposta amarelo">Quase não lembrei</button>
-                <button  onClick={()=>{setChamandoResposta(5)}} className="botaoresposta verde">Zap!</button>
+                <button  onClick={()=>{setChamandoResposta(3) 
+                    chamandoCallback(1)}}className="botaoresposta vermelho">Não lembrei</button>
+                <button  onClick={()=>{setChamandoResposta(4)
+                     chamandoCallback(1)}}className="botaoresposta amarelo">Quase não lembrei</button>
+                <button  onClick={()=>{setChamandoResposta(5)
+                chamandoCallback(1)}} className="botaoresposta verde">Zap!</button>
             </div>
         </div>
         )
@@ -32,7 +35,7 @@ export default function PerguntaResposta({pergunta,resposta,numPergunta}){
         return(
             <div className="pergunta">
             <div>
-        <span className="red"><s>Pergunta({numPergunta})</s></span>  
+        <span className="spanPergunta red"><s>Pergunta({numPergunta})</s></span>  
             </div>
             <div className="icon">
         <img  src="./imgs/Vector1.svg" />
@@ -44,7 +47,7 @@ export default function PerguntaResposta({pergunta,resposta,numPergunta}){
         return(
             <div className="pergunta">
             <div>
-        <span className="yellow"><s>Pergunta({numPergunta})</s></span>  
+        <span className=" spanPergunta yellow "><s>Pergunta({numPergunta})</s></span>  
             </div>
             <div className="icon">
         <img  src="./imgs/Vector2.svg" />
@@ -55,7 +58,7 @@ export default function PerguntaResposta({pergunta,resposta,numPergunta}){
         return(
             <div className="pergunta">
             <div>
-        <span className="green"><s>Pergunta({numPergunta})</s></span>  
+        <span className="spanPergunta green"><s>Pergunta({numPergunta})</s></span>  
             </div>
             <div className="icon">
         <img  src="./imgs/Vector3.svg" />
