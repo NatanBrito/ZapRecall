@@ -1,9 +1,10 @@
 import React from "react"
 import Card from "./Card"
 import Footer from "./Footer";
-export default function Perguntas ({callback}){
+export default function Perguntas (){
   const [respondidas,setRespondidas]=React.useState(0)
-  const [icons,setIcons]=React.useState([1,2])
+  const [icons,setIcons]=React.useState([])
+  const [erros,setErros]=React.useState(0)
     const cards=
     [
         {questao:"O que é JSX?",resposta:"Uma extensão de linguagem do JavaScript"},
@@ -30,11 +31,13 @@ export default function Perguntas ({callback}){
          <Card key={index+1} numPergunta={index+1}
                      img="./imgs/Vector4.svg" pergunta={item.questao} 
                      resposta={item.resposta}
-                     callback={(valor)=> setRespondidas(respondidas + valor)} />
+                     callback={(valor)=> setRespondidas(respondidas + valor)}
+                     callbackIcons={(valor)=> setIcons([...icons,valor])}
+                     callbackErros={(valor)=> setErros(erros + valor)}  />
                   )
         })
         }
-        {respondidas !== 2?<Footer respostaNum={respondidas} /> :<Footer respostaNum={respondidas} icons="0"/>}
+        <Footer respostaNum={respondidas} arrayIcons={icons} numErros={erros}/>
     </>
     )
 }

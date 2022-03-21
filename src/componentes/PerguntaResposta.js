@@ -1,5 +1,5 @@
 import { useState } from "react"
-export default function PerguntaResposta({pergunta,resposta,numPergunta,chamandoCallback}){
+export default function PerguntaResposta({pergunta,resposta,numPergunta,chamandoCallback,chamandoicons,chamandoErros}){
     const [chamandoResposta,setChamandoResposta]=useState(0)
     if(chamandoResposta===  0){
     return(
@@ -23,11 +23,17 @@ export default function PerguntaResposta({pergunta,resposta,numPergunta,chamando
             </div>
             <div className="botoesResposta">
                 <button  onClick={()=>{setChamandoResposta(3) 
-                    chamandoCallback(1)}}className="botaoresposta vermelho">Não lembrei</button>
+                                       chamandoCallback(1)
+                                       chamandoicons("./imgs/Vector1.svg" )
+                                       chamandoErros(1)
+                                       }}className="botaoresposta vermelho">Não lembrei</button>
                 <button  onClick={()=>{setChamandoResposta(4)
-                     chamandoCallback(1)}}className="botaoresposta amarelo">Quase não lembrei</button>
+                                       chamandoCallback(1)
+                                       chamandoicons("./imgs/Vector2.svg") 
+                                       }}className="botaoresposta amarelo">Quase não lembrei</button>
                 <button  onClick={()=>{setChamandoResposta(5)
-                chamandoCallback(1)}} className="botaoresposta verde">Zap!</button>
+                                       chamandoCallback(1)
+                                       chamandoicons("./imgs/Vector3.svg") }} className="botaoresposta verde">Zap!</button>
             </div>
         </div>
         )

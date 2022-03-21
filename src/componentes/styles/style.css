@@ -72,7 +72,6 @@ body{
     align-items: center;
 }
 footer{
-
     display: flex;
     width: 100vw;
     min-height: 50px;
@@ -85,6 +84,7 @@ footer{
 }
 footer nav span{
     margin-top: 5px;
+    margin-bottom: 5px;
     color: #333333;
     font-family: 'Recursive', sans-serif;
     font-weight: 400;
@@ -93,9 +93,13 @@ footer nav span{
 footer nav:nth-child(1){
     margin-top: 10px;
 }
+footer nav:nth-child(:last-child){
+    margin-bottom: 10px;
+}
 footer nav{
     display: flex;
     justify-content: center;
+    
 
 }
 ::-webkit-scrollbar{
@@ -105,6 +109,7 @@ footer nav{
 .perguntas{
  height: 260px;
  margin-top: 20px;
+ margin-bottom: 30px;
  overflow: scroll;
  border-radius: 5px;
 }
@@ -123,10 +128,9 @@ footer nav{
     border-radius: 5px;
 }
 .perguntas .pergunta:nth-child(8){
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 .spanPergunta{
-    background-color: yellowgreen;
     margin-left: 4%;
     width: 100%;
     font-family: 'Recursive', sans-serif;
@@ -200,4 +204,13 @@ display: flex;
 }
 .green{
     color: green;
+}
+.escritaParabens{
+    font-weight: bolder;
+}
+.ultimaNav{
+    margin-bottom: 5px;
+}
+footer nav img{
+    margin-right:3px;
 }
