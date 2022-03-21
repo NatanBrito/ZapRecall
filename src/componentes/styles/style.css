@@ -118,7 +118,7 @@ footer nav{
     background-color: black;
     margin-top: 10px;
     padding: 13px;
-    width: 300px;
+    width: 250px;
     height: 40px;
     display: flex;
     justify-content: space-between;
@@ -138,7 +138,7 @@ footer nav{
 }
 .perguntaResposta{
     padding: 13px;   
-    width: 300px;
+    width: 250px;
     height: 80px;
     background-color: #FFFFD4;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
@@ -182,7 +182,7 @@ display: flex;
     font-weight:lighter 400;
     font-style: normal;
     color: #FFFFFF;
-    width: 85px;
+    width: 80px;
     height: 37px;
     border-radius: 5px;
     border: 0px;
