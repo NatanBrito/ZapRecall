@@ -41,7 +41,7 @@ export default function PerguntaResposta({pergunta,resposta,numPergunta,chamando
         return(
             <div className="pergunta">
             <div>
-        <span className="spanPergunta red"><s>Pergunta({numPergunta})</s></span>  
+        <span className="spanPergunta red"><s>Pergunta{numPergunta}</s></span>  
             </div>
             <div className="icon">
         <img  src="./imgs/Vector1.svg" />
@@ -53,7 +53,7 @@ export default function PerguntaResposta({pergunta,resposta,numPergunta,chamando
         return(
             <div className="pergunta">
             <div>
-        <span className=" spanPergunta yellow "><s>Pergunta({numPergunta})</s></span>  
+        <span className=" spanPergunta yellow "><s>Pergunta{numPergunta}</s></span>  
             </div>
             <div className="icon">
         <img  src="./imgs/Vector2.svg" />
@@ -64,7 +64,7 @@ export default function PerguntaResposta({pergunta,resposta,numPergunta,chamando
         return(
             <div className="pergunta">
             <div>
-        <span className="spanPergunta green"><s>Pergunta({numPergunta})</s></span>  
+        <span className="spanPergunta green"><s>Pergunta{numPergunta}</s></span>  
             </div>
             <div className="icon">
         <img  src="./imgs/Vector3.svg" />
