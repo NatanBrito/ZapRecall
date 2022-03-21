@@ -1,8 +1,6 @@
 import React from "react"
-import Footer from "./Footer"
-import PerguntaResposta from "./PerguntaResposta"
 import Card from "./Card"
-export default function Perguntas (){
+export default function Perguntas ({callback}){
     const cards=
     [
         {questao:"O que é JSX?",resposta:"Uma extensão de linguagem do JavaScript"},
@@ -26,7 +24,7 @@ export default function Perguntas (){
     {
         cards.map((item,index) =>{
             return(
-         <Card key={index+1} numPergunta={index+1} img="./imgs/Vector4.svg" pergunta={item.questao} resposta={item.resposta} />
+         <Card key={index+1} numPergunta={index+1}  img="./imgs/Vector4.svg" pergunta={item.questao} resposta={item.resposta} />
                   )
         })
         }

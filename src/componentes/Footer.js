@@ -1,11 +1,10 @@
-// FOI COLOCADO DIRETO NO TELARECALLS
-// export default function Footer(){
-//     return(
-//         <footer>
-//          <nav>
-//              <span>0/8 CONCLUÍDOS</span>
-//          </nav>
+export default function Footer({respostaNum}){
+    return(
+        <footer>
+         <nav>
+             <span>{respostaNum}/8 CONCLUÍDOS</span>
+         </nav>
          
-//         </footer>
-//     )
-// }
+        </footer>
+    )
+}                 

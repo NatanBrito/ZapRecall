@@ -1,4 +1,5 @@
 import {useState} from "react"
+import Footer from "./Footer";
 import LogoNomePequena from "./LogoNomePequena"
 import Perguntas from "./Perguntas";
 export default function TelaRecalls(){
@@ -9,15 +10,11 @@ export default function TelaRecalls(){
         <div className="telaInicial">
         <LogoNomePequena />
                <div className="perguntas">
-               <Perguntas />
+               <Perguntas callback={(valor)=> setRespondidas(respondidas + valor)} />
                </div>
-               <footer>
-         <nav>
-             <span>{respondidas}/8 CONCLUÍDOS</span>
-         </nav>
+               <Footer respostaNum={respondidas} icons="0"/>
+               </div>
          
-        </footer>
-        </div>
 
     )
 }
