@@ -1,30 +1,25 @@
-import react from "react";
+import { useState } from "react";
 import TelaRecalls from "./TelaRecalls";
-export default function TelaInicial({texto}){
-    const[inicioRecall,setInicioRecall]=react.useState(true)
-      if(inicioRecall){
-  return(
-    <div className="telaInicial">
-    <LogoNome />
-    <div className="alinhandoBotao">
-    <button onClick={()=>{ setInicioRecall(false)}} className="configBotao">{texto}</button>
-    </div>
-    </div>
-  )
-  } else {
-          return <TelaRecalls />
-      }
+import LogoNome from "./LogoNome";
 
-}
-function LogoNome(){
-  return(
-  <div className="logoName">
-          <div className="raioImg">
-          <img src="./imgs/logo.png" alt="logo"/>
-          </div>
-          <div className="escritaTela1">
-          <p>ZapRecall</p>
-          </div>
-          </div>
-  )
+export default function TelaInicial({ texto }) {
+  const [iniciarRecall, setIniciarRecall] = useState(true);
+
+  return iniciarRecall ? (
+    <div className="telaInicial">
+      <LogoNome />
+      <div className="alinhandoBotao">
+        <button
+          onClick={() => {
+            setIniciarRecall(false);
+          }}
+          className="configBotao"
+        >
+          {texto}
+        </button>
+      </div>
+    </div>
+  ) : (
+    <TelaRecalls />
+  );
 }
